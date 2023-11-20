@@ -22,12 +22,12 @@ void swap(int *a, int *b)
  * @i: the index of the element
  * Return: void
 */
-void heapify(int *array, size_t total_size, size_t size, size_t n)
+void heapify(int *array, size_t total_size, size_t size, size_t i)
 {
-	size_t large = n, left, right;
+	size_t large = i, left, right;
 
-	left = 2 * (n + 1) - 1;
-	right = 2 * (n + 1);
+	left = 2 * (i + 1) - 1;
+	right = 2 * (i + 1);
 
 	if (left < size && array[left] > array[large])
 	{
@@ -37,9 +37,9 @@ void heapify(int *array, size_t total_size, size_t size, size_t n)
 	{
 		large = right;
 	}
-	if (n != large)
+	if (i != large)
 	{
-		swap(&array[n], &array[large]);
+		swap(&array[i], &array[large]);
 		print_array(array, total_size);
 		heapify(array, total_size, size, large);
 	}
