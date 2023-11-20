@@ -29,7 +29,7 @@ int get_max(int *array, size_t size)
 */
 void count_sort(int *array, size_t size, int pos)
 {
-	int count[10] = {0}, *temp_arr;
+	int count[10] = {0}, *temp_array;
 	size_t n;
 
 	temp_array = malloc(size * sizeof(int));

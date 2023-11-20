@@ -67,7 +67,7 @@ void heap_sort(int *array, size_t size)
 	{
 		if (n - 1 != 0)
 		{
-			swap(&array[i - 1], &array[0]);
+			swap(&array[n - 1], &array[0]);
 			print_array(array, size);
 		}
 		heapify(array, size, n - 1, 0);

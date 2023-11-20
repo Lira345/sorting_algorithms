@@ -12,7 +12,7 @@ void swap(int *a, int *b)
 
 	res = *a;
 	*a = *b;
-	*b = temp;
+	*b = res;
 }
 /**
  * bubble_sort - sorts an array using bubble sort algorithm
@@ -23,7 +23,7 @@ void swap(int *a, int *b)
 
 void bubble_sort(int *array, size_t size)
 {
-	size_t n, m
+	size_t n, m;
 
 	for (n = 0; n < size; n++)
 	{
